@@ -33,7 +33,7 @@ body {
   color: var(--text-color);
   line-height: 1.6;
   font-size: 16px;
-  min-height: 100vh;
+  min-height: 150vh;
   display: flex;
   flex-direction: column;
 }
@@ -466,4 +466,27 @@ select:focus, input:focus {
 [data-tooltip]:hover:after {
   opacity: 1;
   bottom: 125%;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7a7a7a;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #555 transparent;
 }
