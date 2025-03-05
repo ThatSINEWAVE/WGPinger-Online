@@ -19,7 +19,6 @@
     { "name": "WoT - CH1", "place": "China: Shanghai", "address": "login.wotcnq1.wotgame.cn", "color": "#FF0000" },
     { "name": "WoT - CH2", "place": "China: Shanghai", "address": "login.wotcnq2.wotgame.cn", "color": "#FF8C00" },
     { "name": "WoT - XVM", "place": "Germany: Falkenstein", "address": "stat.modxvm.com", "color": "#000000" },
-    { "name": "WoT - PT1", "place": "Russia: Saint-Petersburg", "address": "login1-wotrpt.lesta.ru", "color": "#8A2BE2" },
     { "name": "WoT - CT1", "place": "Germany: Frankfurt", "address": "login-ct-p1.worldoftanks.net", "color": "#006C6C" },
     { "name": "WoT - CT2", "place": "Germany: Frankfurt", "address": "login-ct-p2.worldoftanks.net", "color": "#A52A2A" }
   ]
