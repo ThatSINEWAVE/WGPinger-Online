@@ -1,0 +1,152 @@
+:root {
+    --primary-color: #2196F3;
+    --online-color: #4CAF50;
+    --offline-color: #F44336;
+    --background: #1A1A1A;
+    --card-bg: #2D2D2D;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background);
+    color: #FFFFFF;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 2rem 0;
+    border-bottom: 2px solid var(--card-bg);
+}
+
+h1 {
+    margin: 0;
+    color: var(--primary-color);
+    font-weight: 300;
+}
+
+.current-ping {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    color: #888;
+}
+
+.server-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.server-card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+
+.server-card:hover {
+    transform: translateY(-3px);
+}
+
+.server-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #888;
+}
+
+.server-card.online::before {
+    background-color: var(--online-color);
+}
+
+.server-card.offline::before {
+    background-color: var(--offline-color);
+}
+
+.server-info {
+    margin-bottom: 0.5rem;
+}
+
+.server-name {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.server-location {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.ping-time {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.status-text {
+    float: right;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    color: #666;
+    border-top: 2px solid var(--card-bg);
+}
+
+.legend {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.status-dot.online {
+    background: var(--online-color);
+}
+
+.status-dot.offline {
+    background: var(--offline-color);
+}
+
+.update-info {
+    font-size: 0.9rem;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { opacity: 1; }
+}
+
+.pinging {
+    animation: pulse 1.5s infinite;
+}
