@@ -1,33 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Server Ping Monitor</title>
+    <title>Wargaming Server Ping Tracker</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <h1>Server Status Monitor</h1>
-            <div class="current-ping">
-                <i class="fas fa-satellite-dish"></i>
-                <span id="current-server">Initializing...</span>
-            </div>
-        </header>
-
-        <div class="server-grid" id="server-grid"></div>
-
-        <footer>
-            <div class="legend">
-                <div class="legend-item"><span class="status-dot online"></span> Online</div>
-                <div class="legend-item"><span class="status-dot offline"></span> Offline</div>
-            </div>
-            <div class="update-info">Updates every 60 seconds - Last checked: <span id="last-checked">-</span></div>
-        </footer>
+      <header>
+        <h1>Wargaming Server Ping Tracker</h1>
+        <button id="pingAllBtn" class="btn btn-primary">Ping All Servers</button>
+      </header>
+      <div class="filters">
+        <div class="filter-group">
+          <label for="regionFilter">Filter by Region:</label>
+          <select id="regionFilter">
+            <option value="all">All Regions</option>
+          </select>
+        </div>
+        <div class="search-group">
+          <label for="searchServer">Search:</label>
+          <input type="text" id="searchServer" placeholder="Search by name or location">
+        </div>
+      </div>
+      <div class="server-list" id="serverList">
+        <!-- Servers will be populated here -->
+        <div class="loading">Loading servers...</div>
+      </div>
     </div>
-
+    <div class="status-bar" id="statusBar">
+      <span id="statusText">Ready</span>
+    </div>
+    <template id="serverTemplate">
+      <div class="server-card">
+        <div class="server-header">
+          <span class="server-name"></span>
+          <span class="server-location"></span>
+        </div>
+        <div class="server-address"></div>
+        <div class="server-ping">
+          <span class="ping-result">-</span>
+          <button class="btn btn-check">Check Ping</button>
+        </div>
+      </div>
+    </template>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
