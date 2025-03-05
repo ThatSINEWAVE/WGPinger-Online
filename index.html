@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Ping Monitor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Server Status Monitor</h1>
+            <div class="current-ping">
+                <i class="fas fa-satellite-dish"></i>
+                <span id="current-server">Initializing...</span>
+            </div>
+        </header>
+
+        <div class="server-grid" id="server-grid"></div>
+
+        <footer>
+            <div class="legend">
+                <div class="legend-item"><span class="status-dot online"></span> Online</div>
+                <div class="legend-item"><span class="status-dot offline"></span> Offline</div>
+            </div>
+            <div class="update-info">Updates every 60 seconds - Last checked: <span id="last-checked">-</span></div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
