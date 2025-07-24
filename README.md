@@ -59,7 +59,7 @@ Web-based ping monitoring tool for Wargaming servers, providing real-time latenc
 
 <div align="center">
 
-## [Join my discord server](https://discord.gg/2nHHHBWNDw)
+## [Join my discord server]()
 
 </div>
 
@@ -81,6 +81,12 @@ To modify servers list:
 ```
 2. Maintain color consistency per region
 3. Host on GitHub Pages for automatic deployment
+
+<div align="center">
+
+## [Join my discord server](https://thatsinewave.github.io/Discord-Redirect/)
+
+</div>
 
 ## Development
 
